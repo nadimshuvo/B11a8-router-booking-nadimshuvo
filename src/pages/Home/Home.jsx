@@ -14,9 +14,6 @@ const Home = () => {
         <Spacer />
         <WeProvideBestLawServices />
         <Spacer />
-
-        {/* <SingleLawyerCardSection />
-        <Spacer /> */}
     </>
   )
 }

@@ -3,7 +3,8 @@ import React from "react";
 import SingleLawyerCard from "./SingleLawyerCard";
 import BookAppointment from "./BookAppointment";
 
-const SingleLawyerCardSection = () => {
+const SingleLawyerCardSection = ({lawyer}) => {
+  
   return (
     <section className="pt-8 bg-white text-[#0F0F0F] text-center border-t border-[#0F0F0F]/15">
       <div className="max-w-[1300px] mx-auto px-2.5">
@@ -22,7 +23,7 @@ const SingleLawyerCardSection = () => {
           </p>
         </div>
 
-        <SingleLawyerCard />
+        <SingleLawyerCard lawyer={lawyer}/>
         <BookAppointment />
         
       </div>

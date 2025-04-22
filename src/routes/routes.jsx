@@ -1,30 +1,39 @@
 import { createBrowserRouter } from "react-router";
 import Home from "../pages/Home/Home";
-import Error from "../pages/Error/Error";
 import RootLayout from "../components/RootLayout/RootLayout";
 import MyBookings from "../pages/My-Bookings/MyBookings";
 import Blogs from "../pages/Blogs/Blogs";
+import Lawyer from "../pages/Lawyer/Lawyer";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
-    errorElement: <Error />,
     children: [
-        {
-            index:true,
-            path: "/",
-            element: <Home/>
+      {
+        index: true,
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "lawyer/:id",
+        loader: async({params})=> {
+          const res = await fetch('lawyers.json');
+          const data = await res.json();
+          const lawyer = data.find(lawyer => lawyer.id === parseInt(params.id))
+          return lawyer
         },
-        {
-          path: "my-bookings",
-          element: <MyBookings />
-        },
-        {
-          path: "blogs",
-          element: <Blogs />
-        }
-    ]
+        element: <Lawyer />,
+      },
+      {
+        path: "my-bookings",
+        element: <MyBookings />,
+      },
+      {
+        path: "blogs",
+        element: <Blogs />,
+      },
+    ],
   },
 ]);
 
