@@ -1,0 +1,36 @@
+[
+    {
+      "id": 1,
+      "question": "What is useState and how does it work in React?",
+      "answer": "useState is a React Hook that lets us add state to functional components. It returns a state variable and a function to update it. When the state changes, React re-renders the component with the new value. It's essential for interactive features like forms, toggles, counters, and dynamic UI updates.",
+      "date": "2025-01-12"     
+    },
+    {
+      "id": 2,
+      "question": "What is the purpose of useEffect in React?",
+      "answer": "useEffect is a React Hook used to perform side effects in functional components — like fetching data, updating the DOM, or setting timers. It runs after the component renders and can re-run when dependencies change, making it ideal for tasks that happen outside the regular render flow.",
+      "date": "2025-02-07"   
+    },
+    
+    {
+      "id": 3,
+      "question": "What is a custom hook in React and when should you use one?",
+      "answer": "A custom hook in React is a reusable function that uses built-in hooks (like useState, useEffect, etc.) to encapsulate logic. We should use one when we want to share stateful logic between components, keep code clean and DRY, and separate business logic from UI for better reusability.",
+      "date": "2025-03-19"     
+    },
+    
+    {
+      "id": 4,
+      "question": "Difference between controlled and uncontrolled components. Which one is better?",
+      "answer": "Controlled components have their state managed by React using hooks like `useState`, offering more control and validation. Uncontrolled components store state in the DOM using refs. Controlled is better for complex forms, while uncontrolled is simpler for quick, basic input handling without full state management.",
+      "date": "2025-04-12"     
+    },
+    
+    {
+      "id": 5,
+      "question": "Tell us something about useFormStatus() in React.",
+      "answer": "`useFormStatus()` is a React Hook (used with React Server Components or `form` elements) that provides the current status of a form submission, such as whether it's **pending** or **submitted**. It helps in showing loading indicators or disabling buttons during form processing. Useful for enhancing UX in async forms.",
+      "date": "2025-04-202"     
+    }    
+  ]
+  

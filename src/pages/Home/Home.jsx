@@ -8,15 +8,15 @@ import SingleLawyerCardSection from '../../components/OurBestLayers/SingleLawyer
 const Home = () => {
   return (
     <>
-        {/* <Hero />
+        <Hero />
         <Spacer />
         <OurBestLayers />
         <Spacer />
         <WeProvideBestLawServices />
-        <Spacer /> */}
-
-        <SingleLawyerCardSection />
         <Spacer />
+
+        {/* <SingleLawyerCardSection />
+        <Spacer /> */}
     </>
   )
 }

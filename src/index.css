@@ -14,12 +14,27 @@ body {
   font-style: normal;
 }
 
+.plus-jakarta-sans-regular {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .plus-jakarta-sans-medium {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
 }
+
+.plus-jakarta-sans-semibold {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
 .plus-jakarta-sans-bold {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-optical-sizing: auto;
@@ -27,12 +42,17 @@ body {
   font-style: normal;
 }
 
+.plus-jakarta-sans-extrabold {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
 
 nav a.active {
     color: #0EA106;
     font-weight: 800;
 }
-
 
 .mobile-menu a.active {
     color:#0EA106;
