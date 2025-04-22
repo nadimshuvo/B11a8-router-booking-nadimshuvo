@@ -7,6 +7,13 @@ body {
   font-style: normal;
 }
 
+.manrope-extrabold {
+  font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
 nav a.active {
     color: #0EA106;
     font-weight: 800;
