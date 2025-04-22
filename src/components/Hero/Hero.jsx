@@ -10,7 +10,7 @@ const Hero = () => {
           backgroundImage: `url(${heroBannerImage})`,
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/40 to-black/80 rounded-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/10 to-black/80 rounded-3xl"></div>
         <div className="max-w-[1009px] text-neutral-content text-center relative z-10">
           <div>
             <h1 className="max-w-[917px] mb-4 text-4xl leading-13 lg:text-5xl lg:leading-[60px] font-extrabold">It avoids subjective claims or exaggeration that might raise red flags legally</h1>

@@ -21,7 +21,7 @@ const WeProvideBestLawServices = () => {
         <Services img={totalLayerImage} title="199+" subtitle="Total Lawyer" />
         <Services img={totalReviewsImage} title="467+" subtitle="Total Reviews"/>
         <Services img={casesInitiatedImage} title="1900+" subtitle="Cases Initiated"/>
-        <Services img={totalStuffsImage} title="300+" subtitle="Total Stuffs"/>
+        <Services img={totalStuffsImage} title="300+" subtitle="Total Stuffs" ls={true}/>
       </div>
     </section>
   );

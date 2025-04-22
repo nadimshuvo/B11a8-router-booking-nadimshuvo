@@ -1,5 +1,5 @@
 import React from "react";
-import LayersCard from "./LayersCard";
+import LawyersCard from "./LawyersCard";
 
 const OurBestLayers = () => {
   return (
@@ -13,12 +13,12 @@ const OurBestLayers = () => {
       </p>
 
       <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-[1300px] mx-auto px-2.5">
-        <LayersCard />
-        <LayersCard />
-        <LayersCard />
-        <LayersCard />
-        <LayersCard />
-        <LayersCard />
+        <LawyersCard />
+        <LawyersCard />
+        <LawyersCard />
+        <LawyersCard />
+        <LawyersCard />
+        <LawyersCard />
       </div>
 
       <button className="bg-[#0EA106] rounded-full text-white py-4 px-8 mt-8 hover:bg-[#2563EB] transition cursor-pointer">
