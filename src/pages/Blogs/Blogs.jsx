@@ -18,7 +18,7 @@ const Blogs = () => {
   }, []);
 
   return (
-    <section className="bg-white p-24">
+    <section className="bg-white max-md:p-4 p-24">
       <div className="max-w-[1300px] mx-auto px-2.5">
         <div className="section-title text-center">
           <h2 className="plus-jakarta-sans-extrabold text-[40px] leading-[50px] text-[#0F0F0F] mb-4">
