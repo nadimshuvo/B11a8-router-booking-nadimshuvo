@@ -14,7 +14,7 @@ const NotFound = ({message}) => {
       <p className="text-2xl text-red-600 mb-4">{message || "Oops❗Page not found"}</p>
       <p className="text-5xl text-red-500 mb-4">{err ? err.id : ""}</p>
       <Link to="/" className="font-black text-3xl text-[#0EA106] py-4 px-15 border border-[#0EA106] rounded-full hover:bg-[#0EA106] hover:text-white transition">
-        Go back home
+        View All Lawyers
       </Link>
       </div>
   );

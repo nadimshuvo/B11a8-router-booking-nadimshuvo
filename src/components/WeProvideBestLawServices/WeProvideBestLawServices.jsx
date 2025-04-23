@@ -9,7 +9,7 @@ import totalStuffsImage from "../../assets/success-staffs.png";
 const WeProvideBestLawServices = () => {
   return (
     <section className="bg-white text-[#0F0F0F] text-center py-20">
-      <h2 className="font-extrabold text-[40px] mb-4">
+      <h2 className="font-extrabold text-[40px] mb-4 animate-pulse">
         We Provide Best Law Services
       </h2>
       <p className="text-[16px] leading-[26px] mb-8">

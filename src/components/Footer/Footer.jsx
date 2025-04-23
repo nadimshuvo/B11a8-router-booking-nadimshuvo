@@ -13,15 +13,15 @@ const Footer = () => {
   return (
     <footer className='bg-[#0F0F0F] py-[100px]'>
       <div className='max-w-[1300px] mx-auto px-2.5 flex flex-col items-center justify-between gap-8'>
-        <img src={logoFooter} alt="" />
+        <img className='animate-pulse' src={logoFooter} alt="logo" />
         <nav className="flex max-sm:flex-col gap-12 text-[18px] font-medium text-[#575757]">
           <NavLink to="/" className="hover:text-[#0EA106]">
             Home
           </NavLink>
-          <NavLink to="/my-bookings" className="hover:text-[#0EA106]">
+          <NavLink to="/bookings" className="hover:text-[#0EA106]">
             My-Bookings
           </NavLink>
-          <NavLink to="/services" className="hover:text-[#0EA106]">
+          <NavLink to="/blogs" className="hover:text-[#0EA106]">
             Blogs
           </NavLink>
           <NavLink to="/contact" className="hover:text-[#0EA106]">

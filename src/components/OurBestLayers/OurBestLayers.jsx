@@ -49,7 +49,7 @@ const OurBestLayers = () => {
       {visibleCount < allLawyers.length && (
         <button
           onClick={handleLoadMore}
-          className="bg-[#0EA106] rounded-full text-white py-4 px-8 mt-8 hover:bg-[#2563EB] transition cursor-pointer"
+          className="bg-[#0EA106] rounded-full text-white py-4 px-8 mt-8 hover:bg-[#2563EB] transition cursor-pointer animate-bounce"
         >
           Show All Lawyer
         </button>
