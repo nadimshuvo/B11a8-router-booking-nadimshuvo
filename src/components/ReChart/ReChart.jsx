@@ -10,14 +10,6 @@ import {
 
 const colors = ["#0088FE", "#00C49F", "#FFBB28", "#FF8042", "red", "pink"];
 
-const data = [
-  { name: "Dr. Rahman", uv: 900 },
-  { name: "Dr. Rumana", uv: 1300 },
-  { name: "Dr. Kumar Sing", uv: 900 },
-  { name: "Dr. Kabir Hossain", uv: 1800 },
-  { name: "Dr. Jhankar Mahbub", uv: 1300 },
-  { name: "Dr. Samiya Sultana", uv: 1600 },
-];
 
 const getPath = (x, y, width, height) => {
   return `M${x},${y + height}C${x + width / 3},${y + height} ${x + width / 2},${
@@ -36,12 +28,18 @@ const TriangleBar = (props) => {
   return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
 };
 
-export default function ReChart() {
+export default function ReChart({lawyerArray }) {
   const isMobile = window.innerWidth < 768;
+
+  const chartData = lawyerArray.map( lawyer => ({
+    name: lawyer.name,
+    uv: parseInt(lawyer.fee, 10)
+  }))
+
   return (
     <ResponsiveContainer width="100%" height={538}>
       <BarChart
-        data={data}
+        data={chartData}
         margin={{
           top: 20,
           right: 30,
@@ -72,7 +70,7 @@ export default function ReChart() {
           shape={<TriangleBar />}
           label={{ position: "top" }}
         >
-          {data.map((entry, index) => (
+          {chartData.map((entry, index) => (
             <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
           ))}
         </Bar>

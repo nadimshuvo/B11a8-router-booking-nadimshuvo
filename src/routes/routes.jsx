@@ -4,6 +4,8 @@ import RootLayout from "../components/RootLayout/RootLayout";
 import MyBookings from "../pages/My-Bookings/MyBookings";
 import Blogs from "../pages/Blogs/Blogs";
 import Lawyer from "../pages/Lawyer/Lawyer";
+import NotFound from "../pages/404 Not Found/NotFound";
+import Header from "../components/Header/Header";
 
 const router = createBrowserRouter([
   {
@@ -17,16 +19,18 @@ const router = createBrowserRouter([
       },
       {
         path: "lawyer/:id",
-        loader: async({params})=> {
-          const res = await fetch('lawyers.json');
+        loader: async ({ params }) => {
+          const res = await fetch("lawyers.json");
           const data = await res.json();
-          const lawyer = data.find(lawyer => lawyer.id === parseInt(params.id))
-          return lawyer
+          const lawyer = data.find(
+            (lawyer) => lawyer.id === parseInt(params.id)
+          );
+          return lawyer;
         },
         element: <Lawyer />,
       },
       {
-        path: "my-bookings",
+        path: "bookings",
         element: <MyBookings />,
       },
       {
@@ -34,6 +38,15 @@ const router = createBrowserRouter([
         element: <Blogs />,
       },
     ],
+  },
+  {
+    path: "*",
+    element: (
+      <>
+        <Header />
+        <NotFound />
+      </>
+    ),
   },
 ]);
 

@@ -24,7 +24,7 @@ const SingleLawyerCardSection = ({lawyer}) => {
         </div>
 
         <SingleLawyerCard lawyer={lawyer}/>
-        <BookAppointment />
+        <BookAppointment lawyer={lawyer}/>
         
       </div>
     </section>

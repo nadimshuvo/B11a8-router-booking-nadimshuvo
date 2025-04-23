@@ -12,10 +12,7 @@ const LawyersCard = ({
     experience,
   },
 }) => {
-  const handleViewDetails = (id) => {
-    console.log("Lawyer ID:", id);
-    // You can navigate or do anything with the ID here
-  };
+  
   return (
     <div className="xl:w-[607px] border border-black/15 rounded-3xl p-6">
       <div className="flex max-lg:justify-center max-[350px]:gap-3 gap-8 md:gap-16 items-center">
@@ -52,11 +49,11 @@ const LawyersCard = ({
             {specialty}
           </p>
           <p className="font-medium max-sm:text-[10px] text-[16px] opacity-70 mb-4">
-            &reg; License No: {license_no}
+            &reg; License No: BD {license_no}
           </p>
 
           <Link to={`/lawyer/${id}`}>
-            <button onClick={()=> handleViewDetails(id)} className="cursor-pointer transition w-full  xl:w-[337px] py-2 border border-[#176AE5]/20 rounded-full text-[#176AE5] font-bold max-sm:text-[10px] text-[16px] hover:bg-[#09982F] hover:text-white">
+            <button className="cursor-pointer transition w-full  xl:w-[337px] py-2 border border-[#176AE5]/20 rounded-full text-[#176AE5] font-bold max-sm:text-[10px] text-[16px] hover:bg-[#09982F] hover:text-white">
               View Details
             </button>
           </Link>
