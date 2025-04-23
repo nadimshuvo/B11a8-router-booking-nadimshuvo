@@ -4,6 +4,7 @@ import { Outlet, useNavigation } from 'react-router'
 import Footer from '../Footer/Footer'
 import Spinner from '../Spinner/Spinner'
 import { ToastContainer } from 'react-toastify'
+import DynamicTitle from '../DynamicTitle/DynamicTitle'
 
 const RootLayout = () => {
   const navigation = useNavigation();
@@ -12,7 +13,9 @@ const RootLayout = () => {
 
   return (
     <>
+ 
         <Header />
+        <DynamicTitle />
         {isNavigating && <Spinner />}
         <Outlet />
         <ToastContainer />
