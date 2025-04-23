@@ -20,14 +20,29 @@ const router = createBrowserRouter([
       {
         path: "lawyer/:id",
         loader: async ({ params }) => {
-          const res = await fetch("lawyers.json");
+          
+          const id = params.id;
+
+          if (!/^\d+$/.test(id)) {
+            throw new Response("Invalid ID", { status: 404 });
+          }
+
+          const res = await fetch("/lawyers.json");
+          if (!res.ok) {
+            throw new Response("File Not Found", { status: 404 });
+          }
+
           const data = await res.json();
-          const lawyer = data.find(
-            (lawyer) => lawyer.id === parseInt(params.id)
-          );
+          const lawyer = data.find((lawyer) => lawyer.id === parseInt(id));
+
+          if (!lawyer) {
+            throw new Response("Lawyer Not Found", { status: 404 });
+          }
+
           return lawyer;
         },
         element: <Lawyer />,
+        errorElement: <NotFound message="Sorry, no lawyer found with this ID !" />,
       },
       {
         path: "bookings",

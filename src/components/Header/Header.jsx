@@ -5,7 +5,7 @@ import { NavLink } from "react-router";
 
 const Header = () => {
   const contactButton = (
-    <button className="bg-[#0EA106] text-white py-4 px-8 rounded-full hover:bg-[#2563EB] transition duration-300 ease-in-out">
+    <button className="font-bold max-lg:w-full max-lg:text-[16px] text-[20px] bg-[#0EA106] text-white py-4 px-8 rounded-full hover:bg-[#2563EB] transition duration-300 ease-in-out">
       Contact Now
     </button>
   );
@@ -46,10 +46,10 @@ const Header = () => {
               <NavLink to="/" className="hover:text-[#0EA106]">
                 Home
               </NavLink>
-              <NavLink to="/my-bookings" className="hover:text-[#0EA106]">
+              <NavLink to="/bookings" className="hover:text-[#0EA106]">
                 My-Bookings
               </NavLink>
-              <NavLink to="/services" className="hover:text-[#0EA106]">
+              <NavLink to="/blogs" className="hover:text-[#0EA106]">
                 Blogs
               </NavLink>
               <NavLink to="/contact" className="hover:text-[#0EA106]">
