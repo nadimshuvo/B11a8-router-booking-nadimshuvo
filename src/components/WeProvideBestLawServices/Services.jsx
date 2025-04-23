@@ -9,7 +9,7 @@ const Services = ({img, title, subtitle, ls}) => {
     threshold: 1
   })
   return (
-    <div ref={ref} className={`bg-[#0F0F0F]/5 py-10 px-12 rounded-2xl xl:min-w-[302px] w-full ${ls ? "max-lg:col-2" : ""}`}>
+    <div ref={ref} className={`bg-[#0F0F0F]/5 py-10 px-12 rounded-2xl xl:min-w-[302px] w-full ${ls ? "max-lg:col-2" : ""} hover:bg-[#09982F]/10 hover:scale-115 hover:border-[#09982F] hover:border transition hover:rotate-[-0.029rad]`}>
         <div className='text-left'>
           <img src={img} alt="Layer icon" />
           <h2 className='mt-4 mb-3 font-extrabold max-sm:text-2xl text-5xl text-[#0F0F0F]'>

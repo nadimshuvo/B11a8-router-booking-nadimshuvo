@@ -63,7 +63,7 @@ const MyBookings = () => {
           ) : null}
           <Spacer />
           {/* My Today Appointments */}
-          <section className="max-w-[1300px] mx-auto px-2.5">
+          <section className="max-w-[1300px] min-h-screen mx-auto px-2.5">
             <div className="section-title text-center">
               <h2 className="plus-jakarta-sans-extrabold text-[40px] leading-[50px] text-[#0F0F0F] mb-4">
                 {lawyerArray.length > 0
@@ -92,7 +92,7 @@ const MyBookings = () => {
                 />
               ))
             ) : (
-              <p>Back to Home</p>
+              null
             )}
           </section>
           <Spacer />

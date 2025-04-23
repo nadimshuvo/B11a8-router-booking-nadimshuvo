@@ -7,6 +7,9 @@ import { toast } from "react-toastify";
 
 
 const BookAppointment = ({lawyer}) => {
+  const today = new Date();
+  const dayName = today.toLocaleDateString('en-US', {weekday: 'long'});
+  const availabileToday = lawyer.availability_days.includes(dayName);
   
   const handleBookAppoinment = (id)=> {    
     const existingStorage = JSON.parse(localStorage.getItem("bookings") || "[]");
@@ -19,7 +22,6 @@ const BookAppointment = ({lawyer}) => {
     }
 
   }
-  
 
   return (
     <div className="book-appoinment mt-8 border border-[#0F0F0F]/15 rounded-2xl p-8 text-left">
@@ -32,8 +34,8 @@ const BookAppointment = ({lawyer}) => {
         <p className="plus-jakarta-sans-bold text-[18px] text-[#141414]">
           Availability
         </p>
-        <p className="plus-jakarta-sans-medium text-sm text-[#09982F] px-3.5 py-[7px] bg-[#09982F]/10 rounded-full border border-[#09982F]/20">
-          Lawyer Available Today
+        <p className={`plus-jakarta-sans-medium text-sm ${availabileToday ? "text-[#09982F] bg-[#09982F]/10" : "text-[#ff0000] bg-[#ff0000]/10"}  px-3.5 py-[7px]  rounded-full border border-[#09982F]/20`}>
+          {availabileToday ? "Lawyer Available Today" : "Lawyer is unavailable today"}
         </p>
       </div>
 
@@ -48,8 +50,8 @@ const BookAppointment = ({lawyer}) => {
       </div>
 
       <Link to="/bookings" state={{lawyer}} onClick={()=> handleBookAppoinment(lawyer.id)}>
-        <div className="cursor-pointer button-book-now bg-[#0EA106] m-6 text-center rounded-full">
-          <button className="cursor-pointer font-bold max-sm:text-[14px] text-[20px] p-3.5 text-white">
+        <div className="cursor-pointer button-book-now bg-[#0EA106] m-6 text-center rounded-full hover:bg-white border border-[#09982F] text-white hover:text-[#09982F] transition">
+          <button className="cursor-pointer font-bold max-sm:text-[14px] text-[20px] p-3.5">
             Book Appointment Now
           </button>
         </div>

@@ -8,13 +8,17 @@ const LawyersCard = ({
     name,
     specialty,
     license_no,
-    availability_status,
+    availability_days,
     experience,
   },
 }) => {
+
+  const today = new Date();
+  const dayName = today.toLocaleDateString('en-US', {weekday: 'long'});
+  const availabileToday = availability_days.includes(dayName);
   
   return (
-    <div className="xl:w-[607px] border border-black/15 rounded-3xl p-6">
+    <div className="xl:w-[607px] border border-black/15 rounded-3xl p-6 hover:bg-[#09982F]/10 hover:scale-110 hover:border-[#09982F] transition hover:rotate-[-0.015rad]">
       <div className="flex max-lg:justify-center max-[350px]:gap-3 gap-8 md:gap-16 items-center">
         <span className="w-[159px] h-[158px] rounded-[12px] bg-[#C4C4C4] overflow-hidden border-2 border-[#09982F]/50">
           <img
@@ -27,16 +31,16 @@ const LawyersCard = ({
           <span className="flex gap-2 font-medium mb-2">
             <p
               className={`max-sm:text-[8px] text-[12px] ${
-                availability_status == "Available"
+                availabileToday
                   ? "text-[#09982F]"
                   : "text-[#FF0000]"
               } py-[5px] px-3.5 ${
-                availability_status == "Available"
+                availabileToday
                   ? "bg-[#09982F]/10"
                   : "bg-[#FF0000]/10"
               } rounded-full`}
             >
-              {availability_status}
+              {availabileToday ? "Available" : "Unavailable"}
             </p>
             <p className="max-sm:text-[8px] text-[12px] text-[#176AE5] py-[5px] px-3.5 bg-[#176AE5]/10 rounded-full">
               {experience}

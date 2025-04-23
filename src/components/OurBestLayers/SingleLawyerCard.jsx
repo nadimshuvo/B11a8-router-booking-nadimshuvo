@@ -12,7 +12,7 @@ const SingleLawyerCard = ({
   },
 }) => {
   return (
-    <div className="border border-[#0F0F0F]/15 rounded-2xl p-8">
+    <div className="border border-[#0F0F0F]/15 rounded-2xl p-8 hover:bg-[#09982F]/10 hover:scale-110 hover:border-[#09982F] transition">
       <div className="flex max-sm:flex-col items-center gap-6">
         <span className="max-sm:w-full w-[308px] h-[308px] bg-[#C4C4C4] rounded-[20px] overflow-hidden">
           <img src={profile_picture} alt="laywer photo" className="w-full h-full object-cover"/>
@@ -51,7 +51,7 @@ const SingleLawyerCard = ({
           {/* Consultation Fee */}
           <div className="flex max-sm:justify-center items-center gap-4 text-[16px]">
             <p className="font-bold text-[#141414]/70">Consultation Fee:</p>
-            <p className="manrope-extrabold font-extrabold text-[#0EA106]">
+            <p className="manrope-extrabold font-extrabold text-[#0EA106] animate-pulse">
               Taka : {fee}
             </p>
           </div>
