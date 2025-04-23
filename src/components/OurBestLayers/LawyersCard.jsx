@@ -28,7 +28,7 @@ const LawyersCard = ({
           />
         </span>
         <div className="text-left">
-          <span className="flex gap-2 font-medium mb-2">
+          <span className="flex items-center gap-2 font-medium mb-2">
             <p
               className={`max-sm:text-[8px] text-[12px] ${
                 availabileToday
