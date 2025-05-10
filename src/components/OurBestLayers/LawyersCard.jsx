@@ -26,6 +26,7 @@ const LawyersCard = ({
             alt=""
             className="w-full h-full object-cover"
           />
+          {/* Avatar */}
         </span>
         <div className="text-left">
           <span className="flex items-center gap-2 font-medium mb-2">
